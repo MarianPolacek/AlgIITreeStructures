@@ -15,6 +15,7 @@ public:
 	~BinarySearchTree();
 
 	void insert(int value);
+	void print_bfs();
 	void print_inorder();
 	void remove(int value);
 	TreeNode* find(int value);

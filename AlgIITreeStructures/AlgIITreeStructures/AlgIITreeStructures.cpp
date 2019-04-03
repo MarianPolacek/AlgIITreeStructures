@@ -17,6 +17,7 @@ int main()
 	tree.insert(5);
 	tree.insert(7);
 
+	tree.print_bfs();
 	tree.print_inorder();
 
 	BinarySearchTree::TreeNode* fastResult = tree.find(7);
@@ -31,7 +32,7 @@ int main()
 	degenerate_tree.insert(6);
 	degenerate_tree.insert(7);
 
-	// NOTE: Print should be same as in previous case
+	degenerate_tree.print_bfs();
 	degenerate_tree.print_inorder();
 
 	BinarySearchTree::TreeNode* slowResult = degenerate_tree.find(7);

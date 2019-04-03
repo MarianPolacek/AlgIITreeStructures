@@ -22,6 +22,10 @@ void BinarySearchTree::insert(int value)
 {
 }
 
+void BinarySearchTree::print_bfs()
+{
+}
+
 void BinarySearchTree::print_inorder()
 {
 }
