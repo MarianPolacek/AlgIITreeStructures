@@ -7,6 +7,8 @@
 
 int main()
 {
+	std::cout << "Non-degenerate tree: " << std::endl;
+
 	BinarySearchTree tree;
 
 	tree.insert(4);
@@ -18,9 +20,19 @@ int main()
 	tree.insert(7);
 
 	tree.print_bfs();
-	tree.print_inorder();
+	
+	tree.print_preorder();
+	tree.print_preorder_iterative();
 
-	BinarySearchTree::TreeNode* fastResult = tree.find(7);
+	tree.print_inorder();
+	tree.print_inorder_iterative();
+
+	tree.print_postorder();
+	tree.print_postorder_iterative();
+
+	BinarySearchTree::TreeNode* fastResult = tree.find_iterative(7);
+
+	std::cout << "Degenerate tree: " << std::endl;
 
 	BinarySearchTree degenerate_tree;
 
@@ -33,7 +45,15 @@ int main()
 	degenerate_tree.insert(7);
 
 	degenerate_tree.print_bfs();
+
+	degenerate_tree.print_preorder();
+	degenerate_tree.print_preorder_iterative();
+
 	degenerate_tree.print_inorder();
+	degenerate_tree.print_inorder_iterative();
+
+	degenerate_tree.print_postorder();
+	degenerate_tree.print_postorder_iterative();
 
 	BinarySearchTree::TreeNode* slowResult = degenerate_tree.find(7);
 }
